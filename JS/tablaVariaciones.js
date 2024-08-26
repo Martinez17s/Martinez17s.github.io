@@ -32,9 +32,9 @@ function cargarCotizaciones() {
                 const cotizacionAnterior = cotizacionesPorMoneda[nombreMoneda][index - 1];
                 
                 // Comparamos el valor de compra de la cotización actual con la anterior
-                if (parseFloat(cotizacion.compra) > parseFloat(cotizacionAnterior.compra)) {
+                if (cotizacion.compra > cotizacionAnterior.compra) {
                     variacionIcono = '<i class="fa-solid fa-arrow-up"></i>'; // Flecha arriba si subió
-                } else if (parseFloat(cotizacion.compra) < parseFloat(cotizacionAnterior.compra)) {
+                } else if (cotizacion.compra < cotizacionAnterior.compra) {
                     variacionIcono = '<i class="fa-solid fa-arrow-down"></i>'; // Flecha abajo si bajó
                 } else {
                     variacionIcono = '<i class="fa-solid fa-equals"></i>'; // Signo igual si no hubo variación

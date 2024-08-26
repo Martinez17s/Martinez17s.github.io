@@ -1,7 +1,7 @@
 // Retrieve favorite quotes from local storage or initialize an empty array
 const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 
-// Function to load favorite quotes
+
 // Function to load favorite quotes
 function cargarCotizacionesFavoritas() {
     // Get the table body element

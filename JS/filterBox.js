@@ -74,12 +74,10 @@ function displayData(data) {
         if (Array.isArray(data)) {
             // Si 'data' es un array (es decir, seleccionaste "TODAS")
             data.forEach(cotizacion => {
-                // Mapeo del nombre si es necesario
-                const displayName = nombreMapping[cotizacion.nombre] || cotizacion.nombre;
                 // Construir HTML para cada cotización y agregarlo a la grilla
                 displayArea.innerHTML += `
                     <div class="cotizacion">
-                        <h3 class="nombre">${displayName}</h3> 
+                        <h3 class="nombre">${cotizacion.nombre}</h3> 
                         <div class="precio-compra">
                             <span>Compra:</span>
                             <span class="compra">${cotizacion.compra}</span>
@@ -93,10 +91,9 @@ function displayData(data) {
             });
         } else if (data) {
             // Si 'data' es un objeto único
-            const displayName = nombreMapping[data.nombre] || data.nombre;
             displayArea.innerHTML += `
                 <div class="cotizacion">
-                    <h3 class="nombre">${displayName}</h3> 
+                    <h3 class="nombre">${data.nombre}</h3> 
                     <div class="precio-compra">
                         <span>Compra:</span>
                         <span class="compra">${data.compra}</span>
