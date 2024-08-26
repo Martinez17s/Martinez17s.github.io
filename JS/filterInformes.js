@@ -31,7 +31,7 @@ function displayCurrencyData(currency) {
     const displayArea = document.querySelector('.table table tbody'); // Get the table body element for displaying data
     const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];// Get favorite quotes from local storage or initialize as empty array
     // Filter favorites to get quotes for the selected currency
-    const filteredQuotes = favoritos.filter(quote => quote.nombre === currency);
+    const filteredQuotes = favoritos.filter(quote => quote.nombre == currency);
     // Create a row for the currency name (spanning all columns)
     let filaMoneda = document.createElement('tr');
     filaMoneda.innerHTML = `<td colspan="5" class="db">${currency}</td>`;// Set the HTML content of the row with the currency name
