@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/pages/Miarchivo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-..." crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <section class="migas-de-pan">
+            <p><strong>Usted esta aqui: </strong><a href="index.html">Inicio</a>/Mi Archivo</p>
+        </section>
+    </header>
+    <div class="caja" id="imprimir">
+        <button class="btn-print" onclick="imprimirRecuadro()"><i class="fa-solid fa-print fa-custom-size"></i></button>
+        <h2 class="Titulo">Mi Archivo</h2>
+        <div class="table">
+            <table id="tabla-cotizaciones">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Moneda</th>
+                        <th>Compra</th>
+                        <th>Venta</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr></tr>
+                    <td colspan="5" class="tfoot"></td>
+                </tfoot>
+            </table>            
+        </div>
+        <script src="JS/cotizacionesGuardadas.js"></script>
+    </div>
+</body>
+
+</html>
