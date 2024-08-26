@@ -10,10 +10,11 @@ function cargarCotizaciones() {
 
     // Agrupa las cotizaciones por moneda en un objeto.
     const cotizacionesPorMoneda = {}; //objeto
-    favoritos.forEach(cotizacion => {
-        if (!cotizacionesPorMoneda[cotizacion.nombre]) {
-            cotizacionesPorMoneda[cotizacion.nombre] = [];
+    favoritos.forEach(cotizacion => {// Itera sobre cada elemento (cotización) en el array 'favoritos'
+        if (!cotizacionesPorMoneda[cotizacion.nombre]) {// Verifica si el objeto 'cotizacionesPorMoneda' ya tiene una clave para la moneda especificada por 'cotizacion.nombre'
+            cotizacionesPorMoneda[cotizacion.nombre] = [];// Si la clave no existe (es undefined o false), se crea un nuevo array vacío para esa moneda
         }
+        // Añade la cotización actual al array correspondiente en 'cotizacionesPorMoneda' bajo la clave de la moneda
         cotizacionesPorMoneda[cotizacion.nombre].push(cotizacion);
     });
 

@@ -14,12 +14,12 @@ function filterAndDisplay() {
 
     if (selectedCurrency === 'TODAS') {
         // Display all favorite currencies, but only once each
-        const uniqueCurrencies = [...new Set(savedCurrencies)]; // Remove duplicates
+        const uniqueCurrencies = [...new Set(savedCurrencies)]; // Remove duplicates and filter a list of currencies names
         uniqueCurrencies.forEach(currency => {
             displayCurrencyData(currency);
         });
     } else if (savedCurrencies.includes(selectedCurrency)) {
-        // Display only the selected favorite currency
+        
         displayCurrencyData(selectedCurrency);// Display data for the selected currency
     } else {
         // Handle the case where the selected currency is not a favorite
@@ -41,9 +41,9 @@ function displayCurrencyData(currency) {
         if (index > 0) {
             // Calculate the variation icon based on the previous quote
             const cotizacionAnterior = filteredQuotes[index - 1];
-            if (parseFloat(cotizacion.compra) > parseFloat(cotizacionAnterior.compra)) {
+            if (cotizacion.compra > cotizacionAnterior.compra) {
                 variacionIcono = '<i class="fa-solid fa-arrow-up"></i>';
-            } else if (parseFloat(cotizacion.compra) < parseFloat(cotizacionAnterior.compra)) {
+            } else if (cotizacion.compra < cotizacionAnterior.compra) {
                 variacionIcono = '<i class="fa-solid fa-arrow-down"></i>';
             } else {
                 variacionIcono = '<i class="fa-solid fa-equals"></i>';

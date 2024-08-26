@@ -1,4 +1,4 @@
-
+// Function to fetch the API
 async function fetchData(url) {
     try {
         const response = await fetch(url);

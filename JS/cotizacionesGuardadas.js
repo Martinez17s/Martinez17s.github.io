@@ -5,7 +5,7 @@ const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 // Function to load favorite quotes
 function cargarCotizacionesFavoritas() {
     // Get the table body element
-    const tbody = document.querySelector('#tabla-cotizaciones tbody'); // Obtenemos el cuerpo de la tabla
+    const tbody = document.querySelector('#tabla-cotizaciones tbody');
     // Initialize a variable to store the HTML for the table rows
     let htmlFilas = '';
     // Iterate over each favorite quote
