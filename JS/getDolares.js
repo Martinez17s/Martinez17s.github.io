@@ -52,7 +52,7 @@ function actualizarFecha() {
 function guardarFavorito(nombre, compra, venta) {
     let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
     const fechaActual = new Date().toLocaleDateString();
-    // La cotización no existe, la agregamos
+
     favoritos.unshift({ nombre, compra, venta, fecha: fechaActual });
     localStorage.setItem('favoritos', JSON.stringify(favoritos));
     alert('Cotización agregada a favoritos el día ' + fechaActual + '!');
@@ -60,10 +60,10 @@ function guardarFavorito(nombre, compra, venta) {
     console.log(JSON.parse(localStorage.getItem('favoritos')));
 }
 
-// Llama a la función inicialmente
+
 actualizarFecha();
 
-// Configura un intervalo para actualizar cada 5 minutos (300000 milisegundos)
+
 setInterval(actualizarFecha, 300000);
 
 
