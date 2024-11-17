@@ -37,9 +37,9 @@ function displayCurrencyData(currency) {
         let variacionIcono = '';
         if (index > 0) {
             const cotizacionAnterior = filteredQuotes[index - 1];
-            if (parseFloat(cotizacion.compra) > parseFloat(cotizacionAnterior.compra)) {
+            if (cotizacion.compra > cotizacionAnterior.compra) {
                 variacionIcono = '<i class="fa-solid fa-arrow-up"></i>';
-            } else if (parseFloat(cotizacion.compra) < parseFloat(cotizacionAnterior.compra)) {
+            } else if (cotizacion.compra < cotizacionAnterior.compra) {
                 variacionIcono = '<i class="fa-solid fa-arrow-down"></i>';
             } else {
                 variacionIcono = '<i class="fa-solid fa-equals"></i>';

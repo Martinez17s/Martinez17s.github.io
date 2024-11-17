@@ -17,10 +17,9 @@ const cargarCotizaciones = async () => {
 
             let cotizaciones = '';
             datos.forEach(cotizacion => {
-                const displayName = nombreMapping[cotizacion.nombre] || cotizacion.nombre;
                 cotizaciones += `
                     <div class="cotizacion">
-                        <h3 class="nombre">${displayName}</h3> 
+                        <h3 class="nombre">${cotizacion.nombre}</h3> 
                         <div class="precio-compra">
                             <span>Compra:</span>
                             <span class="compra">${cotizacion.compra}</span>

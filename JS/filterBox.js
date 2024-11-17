@@ -1,4 +1,4 @@
-
+// Function to fetch the API
 async function fetchData(url) {
     try {
         const response = await fetch(url);
@@ -78,7 +78,7 @@ function displayData(data) {
                 
                 displayArea.innerHTML += `
                     <div class="cotizacion">
-                        <h3 class="nombre">${displayName}</h3> 
+                        <h3 class="nombre">${cotizacion.nombre}</h3> 
                         <div class="precio-compra">
                             <span>Compra:</span>
                             <span class="compra">${cotizacion.compra}</span>
@@ -95,7 +95,7 @@ function displayData(data) {
             const displayName = nombreMapping[data.nombre] || data.nombre;
             displayArea.innerHTML += `
                 <div class="cotizacion">
-                    <h3 class="nombre">${displayName}</h3> 
+                    <h3 class="nombre">${data.nombre}</h3> 
                     <div class="precio-compra">
                         <span>Compra:</span>
                         <span class="compra">${data.compra}</span>
